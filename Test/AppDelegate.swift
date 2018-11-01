@@ -7,15 +7,20 @@
 //
 
 import UIKit
+import GoogleMaps
+import GooglePlaces
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
+    
+    fileprivate let key = "AIzaSyBukDRZk_mLbnqDY0jYHhQYxoWeYofYgZ0"
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        self.configGoogleMap()
         return true
     }
 
@@ -42,5 +47,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
 
+}
+
+extension AppDelegate {
+    fileprivate func configGoogleMap() {
+        GMSServices.provideAPIKey(self.key)
+        GMSPlacesClient.provideAPIKey(self.key)
+    }
 }
 
