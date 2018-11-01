@@ -41,5 +41,7 @@
 	</array>
 	<key>NSLocationWhenInUseUsageDescription</key>
 	<string>Test</string>
+	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
+	<string>Test</string>
 </dict>
 </plist>

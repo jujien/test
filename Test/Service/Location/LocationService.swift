@@ -51,7 +51,7 @@ class LocationService: NSObject {
     fileprivate func startUpdate() {
         self.manager.startMonitoringVisits()
         self.manager.startMonitoringSignificantLocationChanges()
-        self.manager.requestWhenInUseAuthorization()
+        self.manager.requestAlwaysAuthorization()
         self.manager.startUpdatingLocation()
     }
 }
